@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./trade.css";
 import { useNavigate } from "react-router-dom";
+import StockChart from "./StockChart";
 
 const Trade = () => {
     const navigate = useNavigate();
@@ -66,6 +67,12 @@ const Trade = () => {
                         )}
                     </div>
                 </div>
+
+                {selectedStock && (
+                    <div className="chart-section">
+                        <StockChart symbol={selectedStock} />
+                    </div>
+                )}
 
                 <div className="investment-container">
                     <label>Invest:</label>
