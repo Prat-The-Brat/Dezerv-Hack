@@ -28,17 +28,15 @@ const PersonalDash = () => {
       <div className="sidebar">
         <h2>Personal Dashboard</h2>
         <ul>
-          <li>Overview</li>
-          <li>Transactions</li>
-          <li>Investments</li>
-
-          {/* ✅ Button to navigate to Group Dashboard */}
-          <li>
-            <Link to="/grp_total_dash">
-              <button className="dashboard-button">Go to Group Dashboard</button>
-            </Link>
-          </li>
+          <li className="sidebar-nav-item">Overview</li>
+          <li className="sidebar-nav-item">Transactions</li>
+          <li className="sidebar-nav-item">Investments</li>
         </ul>
+        <div className="sidebar-button-container">
+          <Link to="/grp_total_dash">
+            <button className="dashboard-button">Group Dashboard</button>
+          </Link>
+        </div>
       </div>
 
       {/* Main Content */}

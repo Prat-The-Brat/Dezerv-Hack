@@ -313,7 +313,6 @@ html, body {
 
 .cool-heading {
   text-align: center;
-  padding-left: 8rem;
   padding-bottom: 4rem;
   padding-top: -2rem;
   font-size: 2.5rem;
@@ -625,4 +624,13 @@ footer {
   .target-input {
     font-size: 1rem;
   }
+}
+
+.cool-heading {
+  font-size: 1.5rem;
+  color: black !important;
+  margin-top: 4rem;
+  opacity: 0;
+  align-items: left;
+  text-align: left;
 }

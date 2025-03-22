@@ -16,7 +16,7 @@ function Login() {
       // User signed in successfully
       console.log('Signed in user:', result.user);
       // Redirect to dashboard or home page
-      navigate('/dashboard');
+      navigate('/personal_dash');
     } catch (error) {
       console.error('Error signing in with Google:', error);
       setError('Failed to sign in with Google. Please try again.');

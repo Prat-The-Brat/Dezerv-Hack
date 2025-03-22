@@ -199,6 +199,8 @@ function Learn() {
               </div>
             </div>
           </div>
+
+          <h2 className='cool-heading'>So now is the time to start investing!</h2>
         </div>
       </div>
       <Footer hasScrolled={hasScrolled} />
