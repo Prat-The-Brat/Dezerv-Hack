@@ -19,7 +19,7 @@ function Login() {
 
       // Create or get user in backend
       try {
-        const response = await axios.post('http://127.0.0.1:8000/api/stocks/create_user/', {
+        const response = await axios.post('http://127.0.0.1:8000/game/create_user/', {
           user_id: result.user.uid,
           name: result.user.displayName || result.user.email
         });
