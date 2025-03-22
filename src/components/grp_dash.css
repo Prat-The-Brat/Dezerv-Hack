@@ -63,10 +63,11 @@
 
 /* Welcome message */
 .welcome-message {
-    font-size: 1.8rem; /* Slightly bigger */
+    font-size: 1.2rem; /* Slightly bigger */
     font-weight: 600;
     text-align: center;
     margin-bottom: 25px;
+    /* font-size: 20px !important; */
 }
 
 /* Charts Container */

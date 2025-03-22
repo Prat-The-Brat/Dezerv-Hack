@@ -5,6 +5,7 @@ import { auth, googleProvider } from '../firebase/config';
 import './Login.css';
 import googleLogo from '../assets/google-logo.svg';
 import Footer from './Footer';
+import axios from 'axios';
 
 function Login() {
   const [error, setError] = useState('');
@@ -15,8 +16,26 @@ function Login() {
       const result = await signInWithPopup(auth, googleProvider);
       // User signed in successfully
       console.log('Signed in user:', result.user);
-      // Redirect to dashboard or home page
-      navigate('/personal_dash');
+
+      // Create or get user in backend
+      try {
+        const response = await axios.post('http://127.0.0.1:8000/api/stocks/create_user/', {
+          user_id: result.user.uid,
+          name: result.user.displayName || result.user.email
+        });
+
+        if (response.data.success) {
+          // Store user ID in localStorage for future use
+          localStorage.setItem('userId', result.user.uid);
+          // Redirect to dashboard
+          navigate('/personal_dash');
+        } else {
+          setError('Failed to create user in backend. Please try again.');
+        }
+      } catch (backendError) {
+        console.error('Error creating user in backend:', backendError);
+        setError('Failed to create user in backend. Please try again.');
+      }
     } catch (error) {
       console.error('Error signing in with Google:', error);
       setError('Failed to sign in with Google. Please try again.');
