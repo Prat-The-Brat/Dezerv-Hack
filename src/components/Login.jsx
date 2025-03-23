@@ -28,7 +28,7 @@ function Login() {
           // Store user ID in localStorage for future use
           localStorage.setItem('userId', result.user.uid);
           // Redirect to dashboard
-          navigate('/personal_dash');
+          navigate('/learn');
         } else {
           setError('Failed to create user in backend. Please try again.');
         }

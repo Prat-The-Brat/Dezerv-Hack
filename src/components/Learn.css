@@ -632,5 +632,40 @@ footer {
   margin-top: 4rem;
   opacity: 0;
   align-items: left;
-  text-align: left;
+  text-align: center;
+}
+
+.lets-begin-button {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #2E5077 0%, #4DA1A9 100%);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(46, 80, 119, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.lets-begin-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px white;
+}
+
+.lets-begin-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px white;
+}
+
+/* Add this to the existing media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .lets-begin-button {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
 }

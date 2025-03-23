@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { PieChart, Pie, Cell, Tooltip, Legend, LineChart, Line, XAxis, YAxis, ResponsiveContainer } from "recharts";
+import { Link, useParams } from "react-router-dom";
 import "./grp_dash.css";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const Dashboard = () => {
@@ -139,15 +139,15 @@ const Dashboard = () => {
       <div className="sidebar">
         <h2>Dashboard</h2>
         <ul>
-          <li>Home</li>
-          <li>Analytics</li>
-          <li>Settings</li>
+          <li><Link to="/personal_dash" className="sidebar-nav-item">Personal Dashboard</Link></li>
+          <li><Link to="/trade" className="sidebar-nav-item">Trade</Link></li>
+          <li><Link to="/grp_total_dash" className="sidebar-nav-item">Group Dashboard</Link></li>
         </ul>
       </div>
 
       {/* Main Content */}
       <div className="main-content">
-        <h1 className="welcome-message">Welcome to the Group Dashboard</h1>
+        <h1 className="welcome-message">Group Statistics</h1>
 
         {/* Charts Container */}
         <div className="charts-container">

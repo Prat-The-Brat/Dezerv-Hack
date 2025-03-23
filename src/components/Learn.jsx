@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Learn.css';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 function Learn() {
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -177,7 +178,7 @@ function Learn() {
               type="text" 
               value={targetAmount ? `₹${parseInt(targetAmount).toLocaleString()}` : ''}
               onChange={handleAmountChange}
-              placeholder="Enter your target amount"
+              placeholder="Target Amount"
               className="target-input"
             />
           </div>
@@ -201,6 +202,9 @@ function Learn() {
           </div>
 
           <h2 className='cool-heading'>So now is the time to start investing!</h2>
+          <Link to="/personal_dash" className="lets-begin-button">
+            Let's Begin
+          </Link>
         </div>
       </div>
       <Footer hasScrolled={hasScrolled} />

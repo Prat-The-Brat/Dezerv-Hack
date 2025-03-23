@@ -19,7 +19,7 @@
 
 /* Sidebar Styling */
 .sidebar {
-    width: 280px;
+    width: 300px;
     background: #2c3e50;
     padding: 2rem;
     color: white;
@@ -56,15 +56,15 @@
 
 .group-button {
     width: 100%;
-    padding: 1rem;
+    padding: 0.5rem;
     background: #34495e;
     border: none;
     border-radius: 8px;
     color: white;
-    font-size: 1rem;
+    font-size: 0.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-align: left;
+    text-align: center;
 }
 
 .group-button:hover {
@@ -80,10 +80,11 @@
 }
 
 .main-content h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: #2c3e50;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
     font-weight: 600;
+    padding-bottom: 10px;
 }
 
 .welcome-text {
@@ -95,75 +96,102 @@
 /* Group Actions */
 .group-actions {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 2rem;
     margin-bottom: 2rem;
+    max-width: 800px;
+    align-items: center;
+    justify-content: center;
 }
 
 .group-action {
     background: white;
-    padding: 2rem;
+    padding: 0.8rem;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     border: 1px solid #e1e1e1;
+    transition: transform 0.3s ease;
+    flex: 1;
+    margin-top: 3rem;
+}
+
+.group-action:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .group-action h3 {
     color: #2c3e50;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
     font-weight: 600;
+    text-align: center;
 }
 
 .input-group {
     display: flex;
+    align-items: center;
     gap: 1rem;
+    width: 100%;
 }
 
 .input-group input {
     flex: 1;
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 0.6rem;
     border: 2px solid #e1e1e1;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 0.5rem;
     transition: all 0.3s ease;
+    min-width: 0; /* Prevents input from overflowing */
 }
 
 .input-group input:focus {
     outline: none;
     border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.input-group input::placeholder {
+    color: #95a5a6;
 }
 
 .input-group button {
-    padding: 0.8rem 1.5rem;
+    padding: 0.5rem 1rem;
     background: #3498db;
     border: none;
     border-radius: 8px;
     color: white;
-    font-size: 1rem;
+    font-size: 0.5rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    min-width: 140px; /* Ensures consistent button width */
 }
 
 .input-group button:hover {
     background: #2980b9;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.input-group button:active {
+    transform: translateY(0);
 }
 
 /* Back Button */
-.back-button {
-    padding: 1rem 2rem;
+.back-buttonp {
+    padding: 0.5rem 0.6rem;
     background: #95a5a6;
     border: none;
     border-radius: 8px;
     color: white;
-    font-size: 1rem;
+    font-size: 0.6rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.back-button:hover {
+.back-buttonp:hover {
     background: #7f8c8d;
     transform: translateY(-2px);
 }
@@ -207,12 +235,26 @@
         padding: 1.5rem;
     }
 
+    .group-actions {
+        padding: 0 1rem;
+    }
+
+    .group-action {
+        padding: 1.5rem;
+    }
+
     .input-group {
         flex-direction: column;
+        gap: 1rem;
+    }
+
+    .input-group input {
+        width: 100%;
     }
 
     .input-group button {
         width: 100%;
+        min-width: unset;
     }
 
     .main-content h1 {

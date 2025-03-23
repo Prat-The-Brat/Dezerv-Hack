@@ -139,7 +139,7 @@ function LandingPage() {
             <div className="spending-form visible" style={{ transitionDelay: '0.3s' }}>
               <div className="spending-input-container">
                 <h2>I spend</h2>
-                <div className="input-group">
+                <div className="input-groups">
                   <span className="currency">₹
                   </span>
                   <input

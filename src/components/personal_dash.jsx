@@ -36,7 +36,7 @@ const PersonalDash = () => {
 
         setUser({
           name: userResponse.data.name,
-          profilePic: userResponse.data.profile_pic || "/src/assets/images/profile.jpg",
+          profilePic: userResponse.data.profile_pic || "/images/9826392ab976924ab28347a2274961e1.jpg",
           organization: "BITS Pilani",
           currentInvestment: userResponse.data.current_investment || 0
         });
@@ -111,15 +111,15 @@ const PersonalDash = () => {
       <div className="sidebar">
         <h2>Personal Dashboard</h2>
         <ul>
-          <li className="sidebar-nav-item">Overview</li>
-          <li className="sidebar-nav-item">Transactions</li>
-          <li className="sidebar-nav-item">Investments</li>
+          <li><Link to="/grp_total_dash" className="sidebar-nav-item">Your Groups</Link></li>
+          <li><Link to="/trade" className="sidebar-nav-item">Trade</Link></li>
+          {/* <li className="sidebar-nav-item">Investments</li> */}
         </ul>
-        <div className="sidebar-button-container">
+        {/* <div className="sidebar-button-container">
           <Link to="/grp_total_dash">
             <button className="dashboard-button">Group Dashboard</button>
           </Link>
-        </div>
+        </div> */}
       </div>
 
       {/* Main Content */}

@@ -12,7 +12,7 @@
 
 html {
   font-size: 32px;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -254,7 +254,7 @@ figure:hover img {
   background: linear-gradient(135deg, #2E5077 0%, #4DA1A9 100%);
   color: white;
   padding: 1rem 3rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 500;
   border: none;
   border-radius: 50px;
@@ -340,20 +340,21 @@ figure:hover img {
 }
 
 .spending-input-container h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #2E5077;
   margin: 0;
   font-weight: 500;
   line-height: 1;
 }
 
-.input-group {
+.input-groups {
   display: inline-flex;
   align-items: baseline;
   justify-content: center;
   gap: 0.25rem;
   margin: 0;
-  vertical-align: baseline;
+  vertical-align: middle;
+  width: 40%;
 }
 
 .currency {
@@ -364,7 +365,7 @@ figure:hover img {
 }
 
 .amount-input {
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   width: 100px;
   padding: 0;
   border: none;
@@ -389,7 +390,7 @@ figure:hover img {
 }
 
 .category-select {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 0 1.5rem 0 0.5rem;
   border: none;
   border-bottom: 2px solid #4DA1A9;
@@ -474,7 +475,7 @@ figure:hover img {
 }
 
 .graph-title {
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   color: #2E5077;
   margin-bottom: 3rem;
   font-weight: 500;

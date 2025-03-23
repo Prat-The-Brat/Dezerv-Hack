@@ -16,7 +16,7 @@
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 7rem ;
   font-weight: 600;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   background: linear-gradient(135deg, #2E5077 0%, #4DA1A9 100%);

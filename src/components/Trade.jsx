@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./trade.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import StockChart from "./StockChart";
 import axios from "axios";
 
@@ -162,10 +162,8 @@ const Trade = () => {
             <div className="sidebar">
                 <h2>SmartInvest</h2>
                 <ul>
-                    <li>Home</li>
-                    <li>Portfolio</li>
-                    <li>Trade</li>
-                    <li>Settings</li>
+                    <li><Link to="/grp_total_dash" className="sidebar-nav-item">Your Groups</Link></li>
+                    <li><Link to="/personal_dash" className="sidebar-nav-item">Personal Dashboard</Link></li>
                 </ul>
             </div>
 

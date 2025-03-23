@@ -106,7 +106,7 @@ const GrpTotalDash = () => {
     };
 
     const handleGroupClick = (group) => {
-        navigate(`/group/${group.group_id}`);
+        navigate(`/grp_dash/${group.group_name}`);
     };
 
     if (loading) {
@@ -143,7 +143,6 @@ const GrpTotalDash = () => {
 
             <main className="main-content">
                 <h1>Group Management</h1>
-                <p className="welcome-text">Welcome to your group management dashboard!</p>
 
                 {errorMessage && (
                     <div className="error-message">
@@ -180,10 +179,10 @@ const GrpTotalDash = () => {
                 </div>
 
                 <button 
-                    className="back-button"
-                    onClick={() => navigate('/')}
+                    className="back-buttonp"
+                    onClick={() => navigate('/personal_dash')}
                 >
-                    Back to Home
+                    Personal Dashboard
                 </button>
             </main>
         </div>

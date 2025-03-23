@@ -10,29 +10,31 @@
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    background-color: #f8f9fa;
 }
 
 /* Sidebar styling */
 .sidebar {
     width: 300px;
-    min-width: 250px;
-    background: linear-gradient(to bottom, #2E5077, #4DA1A9);
+    min-width: 300px;
+    background: linear-gradient(180deg, #2E5077 0%, #4DA1A9 100%);
     color: white;
-    padding: 25px 20px;
+    padding: 30px 20px;
     font-size: 16px;
     display: flex;
     flex-direction: column;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 20px 20px 0;
     overflow-y: auto;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+    font-size: 28px;
+    margin-bottom: 35px;
     padding-left: 15px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    font-weight: 600;
 }
 
 .sidebar ul {
@@ -47,20 +49,21 @@
     color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
     position: relative;
-    overflow: hidden;
-    padding: 12px 10px;
+    padding: 15px 20px;
     margin: 8px 0;
     cursor: pointer;
     transition: all 0.3s ease;
-    border-radius: 8px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
+    font-size: 15px;
 }
 
 .sidebar-nav-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
     color: #ffffff;
     transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Button container */
@@ -78,7 +81,7 @@
     width: 100%;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 1.2rem;
     font-weight: 600;
     transition: all 0.3s ease;
     text-align: center;
@@ -102,12 +105,11 @@
 /* Main content area */
 .main-content {
     flex-grow: 1;
-    padding: 25px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    width: calc(100% - 300px);
+    width: calc(100% - 280px);
     color: #27272d;
     overflow-y: auto;
     background-color: #f8f9fa;
@@ -121,43 +123,78 @@
     margin-bottom: 25px;
 }
 
-/* Updated User Details Section (Matches Group Styling) */
+/* User Details Section */
 .user-details {
     display: flex;
     align-items: center;
-    background: #2E5077; /* Same as leaderboard */
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    margin-bottom: 20px;
-    
+    background: linear-gradient(135deg, #2E5077 0%, #4DA1A9 100%);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.user-details:hover {
+    transform: translateY(-2px);
 }
 
 .profile-pic {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    margin-right: 20px;
-    border: 3px solid #2E5077; /* Profile pic border */
+    margin-right: 25px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .user-info h2 {
     margin: 0;
-    font-size: 1.5rem;
-    color: #ffffff; /* Match sidebar text */
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .user-info p {
-    margin: 5px 0;
-    font-size: 1rem;
-    color: #ffffff;
+    margin: 8px 0;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .investment-amount {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: #2f89cd;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #79D7BE;
+    margin-top: 10px;
+}
+
+/* Group Selection */
+.group-selection {
+    width: 95%;
+    margin-bottom: 30px;
+}
+
+.group-select {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #2E5077;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.group-select:hover {
+    border-color: #4DA1A9;
+}
+
+.group-select:focus {
+    outline: none;
+    border-color: #2E5077;
+    box-shadow: 0 0 0 3px rgba(46, 80, 119, 0.1);
 }
 
 /* Investment Table */
@@ -207,55 +244,66 @@
     font-weight: bold;
 }
 
-/* Transaction History Styles */
+/* Transaction History Section */
 .transaction-history {
     background: white;
-    border-radius: 15px;
-    padding: 2rem;
-    margin-top: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    width: 95%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .transaction-history h2 {
     color: #2E5077;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
     font-weight: 600;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
 }
 
 .transaction-table-container {
     overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .transaction-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin-top: 1rem;
 }
 
 .transaction-table th,
 .transaction-table td {
-    padding: 1rem;
+    padding: 15px;
     text-align: left;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .transaction-table th {
     background-color: #f8f9fa;
     color: #2E5077;
     font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .transaction-table tr:hover {
     background-color: #f8f9fa;
 }
 
+.transaction-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Transaction Row Styles */
 .buy-row {
-    background-color: rgba(76, 175, 80, 0.05);
+    background-color: rgba(121, 215, 190, 0.05);
 }
 
 .sell-row {
-    background-color: rgba(244, 67, 54, 0.05);
+    background-color: rgba(255, 99, 71, 0.05);
 }
 
 .buy-action {
@@ -266,4 +314,53 @@
 .sell-action {
     color: #f44336;
     font-weight: 600;
+}
+
+/* Loading and Error States */
+.loading-message,
+.error-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 1.2rem;
+    color: #2E5077;
+}
+
+.error-message {
+    color: #f44336;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-radius: 0 0 20px 20px;
+        padding: 20px;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .user-details {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .transaction-history {
+        padding: 15px;
+    }
 }
